@@ -12,6 +12,8 @@ import javafx.application.Application;
  * @version 1.5
  */
 
+// Week 1 setup checking if the environment is working and to test out myy first commit
+
 public class Launcher  {
     /**
      * The main method to start the full system.
