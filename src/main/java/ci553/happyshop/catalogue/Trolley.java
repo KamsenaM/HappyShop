@@ -59,8 +59,18 @@ public class Trolley {
      * }
      */
     public void addProduct(Product product) {
+        // In this block of code this for loop will go through the trolly and check each product and if the product already exists it will just increase the quantity instead  of adding a new duplicate line
+        for (Product existing : products) {
+            if (existing.getProductId().equals(product.getProductId())){
+                existing.setOrderedQuantity(existing.getOrderedQuantity() + 1); // this increases the quantity of the existing product meaning no new line will be added
+                return;
+            }
+        }
+        // if the product doesn't already exist in the trolly it will be added here
+        product.setOrderedQuantity(1);
         products.add(product); // product is appended to the end of the trolley
     }
+
 
     public ArrayList<Product> getProducts() {
         return products;
